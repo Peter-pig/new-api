@@ -16,39 +16,35 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 For commercial licensing, please contact support@quantumnous.com
 */
-import { IconClaude, IconGemini, IconGpt } from './icons'
 
 const models = [
-  { name: 'GPT', desc: '选好就能用', Icon: IconGpt },
-  { name: 'Claude', desc: '选好就能用', Icon: IconClaude },
-  { name: 'Gemini', desc: '选好就能用', Icon: IconGemini },
+  { name: 'GPT', desc: '选好就能用', src: '/models/gpt.png' },
+  { name: 'Claude', desc: '选好就能用', src: '/models/claude.png' },
+  { name: 'Gemini', desc: '选好就能用', src: '/models/gemini.png' },
 ] as const
 
 export function MarketingModels() {
   return (
-    <section
-      className='mh-panel mh-panel--models'
-      id='models'
-      aria-label='模型'
-    >
+    <section className='mh-panel mh-panel--models' id='models' aria-label='模型'>
       <div className='mh-panel__inner'>
         <h2 className='mh-section-title'>选好模型就能用</h2>
-        <p className='mh-section-lead'>
-          不用关心背后怎么接。你只要选模型，剩下的我们来。
-        </p>
+        <p className='mh-section-lead'>不用关心背后怎么接。你只要选模型，剩下的我们来。</p>
         <ul className='mh-model-grid'>
-          {models.map((entry) => {
-            const Icon = entry.Icon
-            return (
-              <li key={entry.name} className='mh-model-card'>
-                <div className='mh-model-card__icon'>
-                  <Icon size={44} />
-                </div>
-                <h3 className='mh-model-card__name'>{entry.name}</h3>
-                <p className='mh-model-card__desc'>{entry.desc}</p>
-              </li>
-            )
-          })}
+          {models.map(({ name, desc, src }) => (
+            <li key={name} className='mh-model-card'>
+              <div className='mh-model-card__icon'>
+                <img
+                  className='mh-model-card__logo'
+                  src={src}
+                  alt=''
+                  width={48}
+                  height={48}
+                />
+              </div>
+              <h3 className='mh-model-card__name'>{name}</h3>
+              <p className='mh-model-card__desc'>{desc}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

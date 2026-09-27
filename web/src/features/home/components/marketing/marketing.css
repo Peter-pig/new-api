@@ -434,3 +434,10 @@ For commercial licensing, please contact support@quantumnous.com
   .mh-icon-brand__stroke { stroke-dashoffset: 0; }
   .mh-icon-brand__node { opacity: 1; }
 }
+
+.mh-model-card__logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
