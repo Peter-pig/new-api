@@ -18,9 +18,9 @@ For commercial licensing, please contact support@quantumnous.com
 */
 
 const models = [
-  { name: 'GPT', desc: '选好就能用', src: '/models/gpt.png' },
-  { name: 'Claude', desc: '选好就能用', src: '/models/claude.png' },
-  { name: 'Gemini', desc: '选好就能用', src: '/models/gemini.png' },
+  { name: 'GPT', desc: '选好就能用', src: '/models/gpt.svg' },
+  { name: 'Claude', desc: '选好就能用', src: '/models/claude.svg' },
+  { name: 'Gemini', desc: '选好就能用', src: '/models/gemini.svg' },
 ] as const
 
 export function MarketingModels() {
@@ -37,8 +37,8 @@ export function MarketingModels() {
                   className='mh-model-card__logo'
                   src={src}
                   alt=''
-                  width={48}
-                  height={48}
+                  width={44}
+                  height={44}
                 />
               </div>
               <h3 className='mh-model-card__name'>{name}</h3>
