@@ -37,8 +37,8 @@ export function MarketingModels() {
                   className='mh-model-card__logo'
                   src={src}
                   alt=''
-                  width={44}
-                  height={44}
+                  width={52}
+                  height={52}
                 />
               </div>
               <h3 className='mh-model-card__name'>{name}</h3>
