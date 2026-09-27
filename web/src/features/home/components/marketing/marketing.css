@@ -124,6 +124,14 @@ For commercial licensing, please contact support@quantumnous.com
   color: #6b6358;
   font-weight: 500;
 }
+.mh-positioning {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #2c2820;
+  margin-top: -0.35rem;
+}
+
 
 .mh-hero-icon {
   color: #1a1a1a;

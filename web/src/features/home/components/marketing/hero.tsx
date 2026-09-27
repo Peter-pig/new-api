@@ -27,6 +27,7 @@ export function MarketingHero(props: HeroProps) {
     <section className='mh-panel mh-panel--hero' id='hero' aria-label='首页'>
       <div className='mh-panel__inner'>
         <p className='mh-eyebrow'>{props.siteName}</p>
+        <p className='mh-positioning'>统一 API 网关</p>
         <div className='mh-hero-icon' aria-hidden>
           <IconCalm size={72} />
         </div>
