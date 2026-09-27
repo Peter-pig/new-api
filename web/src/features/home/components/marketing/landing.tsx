@@ -35,7 +35,7 @@ export function MarketingLanding(props: MarketingLandingProps) {
     (status?.system_name as string | undefined)?.trim() || DEFAULT_SITE_NAME
 
   return (
-    <main className='mh-landing' aria-label='ModelHub 首页'>
+    <main className='mh-landing' aria-label='猫狗 AI 首页'>
       <MarketingHero siteName={siteName} />
       <MarketingModels />
       <MarketingAvailability />

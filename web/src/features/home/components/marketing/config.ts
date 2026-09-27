@@ -17,4 +17,4 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 For commercial licensing, please contact support@quantumnous.com
 */
 /** Brand placeholder — prefer backend system_name when available. */
-export const DEFAULT_SITE_NAME = 'ModelHub'
+export const DEFAULT_SITE_NAME = '猫狗 AI'
