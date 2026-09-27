@@ -138,32 +138,17 @@ export function IconBrand(props: IconProps) {
       viewBox='0 0 64 64'
       aria-hidden
     >
-      <path
-        className='mh-icon-brand__stroke'
-        {...stroke}
-        strokeWidth={1.7}
-        d='M18.4 44.2 L18.8 22.6 L31.6 40.8 Z'
-      />
-      <path
-        className='mh-icon-brand__stroke mh-icon-brand__stroke--late'
-        {...stroke}
-        strokeWidth={1.7}
-        d='M33.2 41.1 C36.4 28.8 44.2 22.4 51.2 24.6 C48.6 32.2 44.8 38.6 36.8 44.4 Z'
-      />
-      <path
-        className='mh-icon-brand__stroke mh-icon-brand__stroke--late2'
-        {...stroke}
-        strokeWidth={1.6}
-        d='M20.2 44.8 H46.6'
-      />
-      <circle
-        className='mh-icon-brand__node'
-        cx='32.1'
-        cy='42.6'
-        r='2.6'
-        fill='currentColor'
-        stroke='none'
-      />
+      <g className='mh-icon-brand__spin'>
+        <path className='mh-icon-brand__stroke' {...stroke} strokeWidth={1.75} d='M32.1 10.4v16.8' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d1' {...stroke} strokeWidth={1.75} d='M32.1 36.6v16.9' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d2' {...stroke} strokeWidth={1.7} d='M11.2 32.2h16.6' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d3' {...stroke} strokeWidth={1.7} d='M36.4 32.2h16.8' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d4' {...stroke} strokeWidth={1.65} d='M16.6 16.8l11.4 11.2' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d5' {...stroke} strokeWidth={1.65} d='M36.2 36.4l11.6 11.3' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d6' {...stroke} strokeWidth={1.65} d='M47.6 16.6L36.4 27.9' />
+        <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d7' {...stroke} strokeWidth={1.65} d='M27.8 36.5L16.4 47.8' />
+        <circle className='mh-icon-brand__node' cx='32.1' cy='32.2' r='3.1' fill='none' {...stroke} strokeWidth={1.7} />
+      </g>
     </svg>
   )
 }
