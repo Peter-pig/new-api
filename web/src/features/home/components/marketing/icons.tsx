@@ -147,7 +147,7 @@ export function IconBrand(props: IconProps) {
         <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d5' {...stroke} strokeWidth={1.65} d='M36.2 36.4l11.6 11.3' />
         <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d6' {...stroke} strokeWidth={1.65} d='M47.6 16.6L36.4 27.9' />
         <path className='mh-icon-brand__stroke mh-icon-brand__stroke--d7' {...stroke} strokeWidth={1.65} d='M27.8 36.5L16.4 47.8' />
-        <circle className='mh-icon-brand__node' cx='32.1' cy='32.2' r='3.1' fill='none' {...stroke} strokeWidth={1.7} />
+        <circle className='mh-icon-brand__node' cx='32.1' cy='32.2' r='3.1' fill='none' stroke='currentColor' strokeWidth={1.7} />
       </g>
     </svg>
   )
