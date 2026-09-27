@@ -1,0 +1,384 @@
+/*
+Copyright (C) 2023-2026 QuantumNous
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+For commercial licensing, please contact support@quantumnous.com
+*/
+
+/* Fullpage marketing landing — cream graph paper, Swiss layout */
+.mh-landing {
+  height: 100svh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 0;
+  scroll-behavior: smooth;
+  color: #1a1a1a;
+  background-color: #f5f0e6;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgba(60, 48, 32, 0.06) 23px,
+      rgba(60, 48, 32, 0.06) 24px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 23px,
+      rgba(60, 48, 32, 0.06) 23px,
+      rgba(60, 48, 32, 0.06) 24px
+    );
+  background-attachment: local;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'SF Pro Text',
+    'SF Pro Display',
+    'Segoe UI',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mh-landing a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mh-landing ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mh-landing h1,
+.mh-landing h2,
+.mh-landing h3,
+.mh-landing p {
+  margin: 0;
+}
+
+.mh-panel {
+  min-height: 100%;
+  height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4.5rem 1.5rem 3.5rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 -12px 28px -18px rgba(40, 30, 18, 0.12);
+}
+
+.mh-panel__inner {
+  width: min(640px, 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: mh-pageIn 0.55s ease both;
+}
+
+.mh-panel__inner--wide {
+  width: min(720px, 100%);
+}
+
+@keyframes mh-pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotateX(2deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mh-eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b6358;
+  font-weight: 500;
+}
+
+.mh-hero-icon {
+  color: #1a1a1a;
+  margin: 0.25rem 0 0.5rem;
+  opacity: 0.92;
+}
+
+.mh-headline {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  max-width: 14em;
+}
+
+.mh-subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 400;
+  color: #4a453c;
+  letter-spacing: 0.35em;
+  margin-top: 0.25rem;
+}
+
+.mh-subtitle--cta {
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.mh-section-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.mh-section-lead {
+  font-size: 1rem;
+  color: #5c564c;
+  max-width: 28em;
+  margin-bottom: 0.75rem;
+}
+
+.mh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  border: 1.5px solid #1a1a1a;
+  cursor: pointer;
+  font: inherit;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.mh-btn--primary {
+  background: #1a1a1a;
+  color: #f5f0e6;
+  margin-top: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.mh-btn--primary:hover {
+  background: #2e2a24;
+  transform: translateY(-1px);
+}
+
+.mh-btn--primary:active {
+  transform: translateY(0);
+}
+
+.mh-btn--primary:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+.mh-scroll-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #8a8276;
+  opacity: 0.8;
+}
+
+.mh-scroll-hint span::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 18px;
+  margin: 0.35rem auto 0;
+  background: #8a8276;
+  animation: mh-drip 1.6s ease-in-out infinite;
+}
+
+@keyframes mh-drip {
+  0%,
+  100% {
+    transform: scaleY(0.6);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.mh-model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.mh-model-card {
+  background: rgba(255, 252, 245, 0.72);
+  border: 1px solid rgba(60, 48, 32, 0.12);
+  border-radius: 16px;
+  padding: 1.5rem 1rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  backdrop-filter: blur(2px);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.mh-model-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -12px rgba(40, 30, 18, 0.22);
+}
+
+.mh-model-card__icon {
+  color: #1a1a1a;
+}
+
+.mh-model-card__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.mh-model-card__desc {
+  font-size: 0.875rem;
+  color: #6b6358;
+}
+
+.mh-avail-table {
+  width: 100%;
+  margin-top: 0.75rem;
+  background: rgba(255, 252, 245, 0.72);
+  border: 1px solid rgba(60, 48, 32, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.mh-avail-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr 1.2fr;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.95rem 1.25rem;
+  border-top: 1px solid rgba(60, 48, 32, 0.08);
+}
+
+.mh-avail-row--head {
+  border-top: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8276;
+  font-weight: 500;
+  background: rgba(60, 48, 32, 0.03);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.mh-avail-name {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.mh-avail-metric {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  color: #2e2a24;
+}
+
+.mh-avail-spark {
+  color: #3d6b4f;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mh-avail-footnote {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: #8a8276;
+  letter-spacing: 0.02em;
+}
+
+.mh-cta-brand {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a8276;
+}
+
+@media (max-width: 640px) {
+  .mh-model-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+
+  .mh-avail-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .mh-avail-row--head {
+    display: none;
+  }
+
+  .mh-avail-spark {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mh-landing {
+    scroll-behavior: auto;
+  }
+
+  .mh-panel__inner {
+    animation: none;
+  }
+
+  .mh-scroll-hint span::after {
+    animation: none;
+  }
+
+  .mh-btn--primary:hover,
+  .mh-model-card:hover {
+    transform: none;
+  }
+}
