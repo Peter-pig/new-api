@@ -18,9 +18,9 @@ For commercial licensing, please contact support@quantumnous.com
 */
 
 const models = [
-  { name: 'GPT', desc: '选好就能用', src: '/models/gpt.svg' },
-  { name: 'Claude', desc: '选好就能用', src: '/models/claude.svg' },
-  { name: 'Gemini', desc: '选好就能用', src: '/models/gemini.svg' },
+  { name: 'GPT', desc: '选好就能用', src: '/models/gpt-line-v2.png' },
+  { name: 'Claude', desc: '选好就能用', src: '/models/claude-line-v2.png' },
+  { name: 'Gemini', desc: '选好就能用', src: '/models/gemini-line-v2.png' },
 ] as const
 
 export function MarketingModels() {
