@@ -127,3 +127,44 @@ export function IconArrow(props: IconProps) {
     </svg>
   )
 }
+
+export function IconBrand(props: IconProps) {
+  const size = props.size ?? 72
+  return (
+    <svg
+      className={`mh-icon-brand ${props.className ?? ''}`.trim()}
+      width={size}
+      height={size}
+      viewBox='0 0 64 64'
+      aria-hidden
+    >
+      <path
+        className='mh-icon-brand__stroke'
+        {...stroke}
+        strokeWidth={1.7}
+        d='M18.4 44.2 L18.8 22.6 L31.6 40.8 Z'
+      />
+      <path
+        className='mh-icon-brand__stroke mh-icon-brand__stroke--late'
+        {...stroke}
+        strokeWidth={1.7}
+        d='M33.2 41.1 C36.4 28.8 44.2 22.4 51.2 24.6 C48.6 32.2 44.8 38.6 36.8 44.4 Z'
+      />
+      <path
+        className='mh-icon-brand__stroke mh-icon-brand__stroke--late2'
+        {...stroke}
+        strokeWidth={1.6}
+        d='M20.2 44.8 H46.6'
+      />
+      <circle
+        className='mh-icon-brand__node'
+        cx='32.1'
+        cy='42.6'
+        r='2.6'
+        fill='currentColor'
+        stroke='none'
+      />
+    </svg>
+  )
+}
+

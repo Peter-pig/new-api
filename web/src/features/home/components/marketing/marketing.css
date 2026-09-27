@@ -391,17 +391,45 @@ For commercial licensing, please contact support@quantumnous.com
   }
 }
 
-.mh-hero-logo {
-  margin: 0.25rem 0 0.5rem;
-  width: 120px;
-  height: 120px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.6), 0 8px 24px -16px rgba(40,30,18,0.25);
+
+.mh-hero-mark {
+  margin: 0.35rem 0 0.65rem;
+  color: #1a1a1a;
+  line-height: 0;
 }
-.mh-hero-logo img {
+.mh-icon-brand {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  animation: mhBrandFloat 5.5s ease-in-out infinite;
+  transform-origin: 50% 60%;
+}
+.mh-icon-brand__stroke {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: mhBrandDraw 1.1s ease forwards;
+}
+.mh-icon-brand__stroke--late { animation-delay: 0.18s; }
+.mh-icon-brand__stroke--late2 { animation-delay: 0.32s; }
+.mh-icon-brand__node {
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: mhBrandNode 0.55s ease 0.55s forwards;
+}
+@keyframes mhBrandDraw { to { stroke-dashoffset: 0; } }
+@keyframes mhBrandNode {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes mhBrandFloat {
+  0%, 100% { transform: translateY(0) rotate(-0.6deg); }
+  50% { transform: translateY(-5px) rotate(0.8deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mh-icon-brand,
+  .mh-icon-brand__stroke,
+  .mh-icon-brand__stroke--late,
+  .mh-icon-brand__stroke--late2,
+  .mh-icon-brand__node { animation: none !important; }
+  .mh-icon-brand__stroke { stroke-dashoffset: 0; }
+  .mh-icon-brand__node { opacity: 1; }
 }

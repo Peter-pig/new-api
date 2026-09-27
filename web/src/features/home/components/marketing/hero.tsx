@@ -16,7 +16,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 For commercial licensing, please contact support@quantumnous.com
 */
-import { IconArrow } from './icons'
+import { IconArrow, IconBrand } from './icons'
 
 type HeroProps = {
   siteName: string
@@ -28,8 +28,8 @@ export function MarketingHero(props: HeroProps) {
       <div className='mh-panel__inner'>
         <p className='mh-eyebrow'>{props.siteName}</p>
         <p className='mh-positioning'>统一 API 网关</p>
-        <div className='mh-hero-logo' aria-hidden>
-          <img src='/maogou-logo.png' alt='' width={120} height={120} />
+        <div className='mh-hero-mark' aria-hidden>
+          <IconBrand size={88} />
         </div>
         <h1 className='mh-headline'>稳定用上你想用的模型</h1>
         <p className='mh-subtitle'>省心</p>
